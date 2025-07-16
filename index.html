@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saied Dhia</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <!-- Logo / Brand -->
+            <a class="navbar-brand" href="#home" onclick="scrollToSection('home')">
+                <h1 class="logo-text">
+                    <span class="logo-name">SaiedDhia</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-title"></span>
+                </h1>
+                <p class="logo-subtitle">Full Stack Developer</p>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler collapsed" 
+                    type="button" 
+                    onclick="toggleMobileMenu()"
+                    aria-expanded="false"
+                    aria-controls="navbarNav"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" 
+                           href="#home" 
+                           onclick="scrollToSection('home')"
+                           data-section="home">
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="#skills" 
+                           onclick="scrollToSection('skills')"
+                           data-section="skills">
+                            <span class="nav-text">Skills</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="#projects-uiux" 
+                           onclick="scrollToSection('projects-uiux')"
+                           data-section="projects-uiux">
+                            <span class="nav-text">UI/UX</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="#projects" 
+                           onclick="scrollToSection('projects')"
+                           data-section="projects">
+                            <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="#contact" 
+                           onclick="scrollToSection('contact')"
+                           data-section="contact">
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+
+                    <!-- CTA Button -->
+                    <li class="nav-item">
+                        <button class="btn btn-primary" onclick="downloadCV()">
+                            <i class="fas fa-download"></i>
+                            <span class="btn-text">Download CV</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section loaded" id="home">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Saied Dhia</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Full Stack Developer</h2>
+                    <p class="hero-description">
+                        Passionate full-stack developer from Tunisia, creating innovative web solutions 
+                        with modern technologies and creative design approaches.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="contactMe()">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadCV()">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </button>
+                        <div class="cv-loading-overlay" id="cvLoadingOverlay">
+                            <div class="cv-spinner">
+                                <div class="cv-spinner-dot"></div>
+                                <div class="cv-spinner-dot"></div>
+                                <div class="cv-spinner-dot"></div>
+                            </div>
+                            <span class="cv-loading-text">Downloading CV...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Experience</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="stat-number">26+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-tools"></i>
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <div class="avatar-3d">
+                                <div class="avatar-ring ring-1"></div>
+                                <div class="avatar-ring ring-2"></div>
+                                <div class="avatar-ring ring-3"></div>
+                                <div class="avatar-container">
+                                    <img src="https://avatars.githubusercontent.com/u/96437437?v=4" alt="Saied Dhia" class="avatar-image">
+                                    <div class="avatar-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Saied Dhia</h3>
+                            <p>Full Stack Developer</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nabeul, Tunisia</span>
+                            </div>
+                        </div>
+                        <div class="profile-tech">
+                            <span class="tech-tag">React JS</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Symfony</span>
+                            <span class="tech-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-laptop-code"></i>
+                Technical Skills
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Angular -->
+                <div class="skill-item" style="animation-delay: 0s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <h4>Angular</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;">
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- React -->
+                <div class="skill-item" style="animation-delay: 0.1s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h4>React</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;">
+                            <span class="skill-percentage">50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-item" style="animation-delay: 0.2s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;">
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WordPress -->
+                <div class="skill-item" style="animation-delay: 0.3s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h4>WordPress</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;">
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dart -->
+                <div class="skill-item" style="animation-delay: 0.4s;">
+                    <div class="skill-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h4>Dart</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;">
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHP -->
+                <div class="skill-item" style="animation-delay: 0.5s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h4>PHP</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;">
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-item" style="animation-delay: 0.6s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>Python</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;">
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Symfony -->
+                <div class="skill-item" style="animation-delay: 0.7s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-symfony"></i>
+                    </div>
+                    <h4>Symfony</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;">
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Firebase -->
+                <div class="skill-item" style="animation-delay: 0.8s;">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Firebase</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;">
+                            <span class="skill-percentage">50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Express.js -->
+                <div class="skill-item" style="animation-delay: 0.9s;">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h4>Express.js</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;">
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LoopBack -->
+                <div class="skill-item" style="animation-delay: 1.0s;">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4>LoopBack</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;">
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pascal -->
+                <div class="skill-item" style="animation-delay: 1.1s;">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>Pascal</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;">
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VB.NET -->
+                <div class="skill-item" style="animation-delay: 1.2s;">
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4>VB.NET</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;">
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                Services
+            </h2>
+            
+            <div class="services-grid">
+                <!-- Web Development -->
+                <div class="service-card" style="animation-delay: 0s;">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack web applications with modern frameworks</p>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="service-card" style="animation-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Cross-platform mobile apps with Flutter and React Native</p>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="service-card" style="animation-delay: 0.4s;">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creative and user-friendly interface design with Figma</p>
+                </div>
+
+                <!-- IT Maintenance -->
+                <div class="service-card" style="animation-delay: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>IT Maintenance</h3>
+                    <p>Hardware repair, CCTV installation, and technical support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Projects Section -->
+    <section class="uiux-section" id="projects-uiux">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-paint-brush"></i>
+                UI/UX Projects
+            </h2>
+            
+            <div class="uiux-grid">
+                <!-- AutiChef -->
+                <div class="uiux-card" style="animation-delay: 0s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">AutiChef</h3>
+                        <p class="uiux-description">AutiChef, an innovative digital platform designed to improve nutritional support for children with autism.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">Figma Design</span>
+                            <span class="feature-tag">Digital Health</span>
+                            <span class="feature-tag">UX/UI</span>
+                            <span class="feature-tag">Accessibility</span>
+                            <span class="feature-tag">Gamification</span>
+                            <span class="feature-tag">Community</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-utensils"></i>
+                            <h4>AutiChef</h4>
+                            <p>Autism nutrition platform</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342376049034309632--FJG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chatbot UI -->
+                <div class="uiux-card" style="animation-delay: 0.15s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">AI Chatbot UI Exploration</h3>
+                        <p class="uiux-description">An in-depth user interface exploration for an AI-powered chatbot.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">Figma</span>
+                            <span class="feature-tag">AI</span>
+                            <span class="feature-tag">Chatbot</span>
+                            <span class="feature-tag">UX/UI</span>
+                            <span class="feature-tag">Mobile App</span>
+                            <span class="feature-tag">Innovation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-robot"></i>
+                            <h4>AI Chatbot UI Exploration</h4>
+                            <p>AI Chatbot UI</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342363247867584512-9ekh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NewsAI360 -->
+                <div class="uiux-card" style="animation-delay: 0.3s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">NewsAI360</h3>
+                        <p class="uiux-description">News reimagined through artificial intelligence with a modern and intuitive interface.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">AI Integration</span>
+                            <span class="feature-tag">Modern UI</span>
+                            <span class="feature-tag">Responsive Design</span>
+                            <span class="feature-tag">Real-time Updates</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-newspaper"></i>
+                            <h4>NewsAI360</h4>
+                            <p>Modern AI-powered news</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-productdesign-activity-7346354040567386113-LEEj')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StockMind AI -->
+                <div class="uiux-card" style="animation-delay: 0.45s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">StockMind AI</h3>
+                        <p class="uiux-description">Smart UI/UX interface for stock management with AI integration.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">AI Analytics</span>
+                            <span class="feature-tag">Stock Management</span>
+                            <span class="feature-tag">Dashboard</span>
+                            <span class="feature-tag">Predictive Insights</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-boxes"></i>
+                            <h4>StockMind AI</h4>
+                            <p>Smart stock management</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-intelligenceartificielle-gestiondestocks-activity-7346014777988542466-9YVp')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok AI Studio -->
+                <div class="uiux-card" style="animation-delay: 0.6s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">TikTok AI Studio</h3>
+                        <p class="uiux-description">AI-based video generation studio inspired by TikTok, featuring advanced functionalities.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">Video Generation</span>
+                            <span class="feature-tag">AI Tools</span>
+                            <span class="feature-tag">Social Media</span>
+                            <span class="feature-tag">Creative Studio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-video"></i>
+                            <h4>TikTok AI Studio</h4>
+                            <p>AI video studio</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-aidesign-activity-7343807036234633216--5FQ')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apple E-commerce Redesign -->
+                <div class="uiux-card" style="animation-delay: 0.75s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">Apple E-commerce Redesign</h3>
+                        <p class="uiux-description">Apple e-commerce redesign: immersive 3D UI/UX with integrated AI.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">3D Interface</span>
+                            <span class="feature-tag">E-commerce</span>
+                            <span class="feature-tag">AI Integration</span>
+                            <span class="feature-tag">Premium Design</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fab fa-apple"></i>
+                            <h4>Apple E-commerce Redesign</h4>
+                            <p>Immersive 3D e-commerce</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-productdesign-figma-activity-7343320966564872192-4msy')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OptiTrend AI -->
+                <div class="uiux-card" style="animation-delay: 0.9s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">OptiTrend AI</h3>
+                        <p class="uiux-description">Strategic UX dashboard with AI for real-time trend analysis.</p>
+                        
+                        <div class="uiux-features">
+                            <span class="feature-tag">Real-time Analytics</span>
+                            <span class="feature-tag">Trend Analysis</span>
+                            <span class="feature-tag">Strategic Dashboard</span>
+                            <span class="feature-tag">AI Insights</span>
+                        </div>
+                    </div>
+                    
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>OptiTrend AI</h4>
+                            <p>Real-time AI analytics</p>
+                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxuidesign-figma-designstrataezgique-activity-7342715470606753792-wSCL')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-rocket"></i>
+                Featured Projects
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- NovaPlay -->
+                <div class="project-card" style="animation-delay: 0s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>NovaPlay</h3>
+                            <span class="project-updated">Updated 2 minutes ago</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Plateforme de gaming moderne avec design 3D et derniers jeux.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://dhiasaied.github.io/NovaPlay/')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/NovaPlay')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GeoVision -->
+                <div class="project-card" style="animation-delay: 0.1s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>GeoVision</h3>
+                            <span class="project-updated">Updated 2 minutes ago</span>
+                        </div>
+                    </div>
+                    <p class="project-description">GeoVision est un site interactif de géographie mondiale.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://dhiasaied.github.io/GeoVision/')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/GeoVision')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NeoTube -->
+                <div class="project-card" style="animation-delay: 0.2s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>NeoTube</h3>
+                            <span class="project-updated">Updated 3 minutes ago</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Nouvelle génération de YouTube avec interface moderne et fonctionnalités avancées.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://dhiasaied.github.io/NeoTube/')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/NeoTube')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- StageConnect+ -->
+                <div class="project-card" style="animation-delay: 0.3s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>StageConnect+</h3>
+                            <span class="project-updated">Updated last week</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Plateforme étudiante pour gérer stages, PFE, présentations et visas à l'étranger.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mathly -->
+                <div class="project-card" style="animation-delay: 0.4s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Mathly</h3>
+                            <span class="project-updated">Updated 2 weeks ago</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Calculatrice Flutter simple et efficace avec opérations mathématiques de base.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Mathly')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Mathly')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tesla Humanoid Robot AI -->
+                <div class="project-card" style="animation-delay: 0.5s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Tesla Humanoid Robot AI</h3>
+                            <span class="project-updated">Updated May 30</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Site e-commerce WordPress pour Tesla Humanoid Robot AI au service de l'humanité.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">WordPress</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">WooCommerce</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dashboard Pro -->
+                <div class="project-card" style="animation-delay: 0.6s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Dashboard Pro</h3>
+                            <span class="project-updated">Updated May 17</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Dashboard Angular avec Node.js et MySQL pour gérer clients, utilisateurs et tutoriels.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TuniChic -->
+                <div class="project-card" style="animation-delay: 0.7s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>TuniChic</h3>
+                            <span class="project-updated">Updated May 10</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Boutique en ligne de cosmétiques, soins et accessoires, alliant beauté et élégance.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/TuniChic')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TuniChic')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TaskFlow -->
+                <div class="project-card" style="animation-delay: 0.8s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>TaskFlow</h3>
+                            <span class="project-updated">Updated May 6</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Gérez vos projets et tâches facilement. Créez, suivez et modifiez en un clin d'œil!</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/TaskFlow')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TaskFlow')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TechniHome -->
+                <div class="project-card" style="animation-delay: 0.9s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>TechniHome</h3>
+                            <span class="project-updated">Updated May 4</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Application pour contrôler, surveiller et optimiser tous les équipements de votre maison intelligente.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/TechniHome')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TechniHome')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gestion Budgétaire -->
+                <div class="project-card" style="animation-delay: 1.0s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Gestion Budgétaire</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">App mobile de gestion financière pour suivre vos dépenses et votre budget.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Dart</span>
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">SQLite</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ServeLink -->
+                <div class="project-card" style="animation-delay: 1.1s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>ServeLink</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Permet de consulter, vérifier, suivre les devises et recevoir des notifications facilement.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Symfony</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/ServeLink')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/ServeLink')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MedPartix -->
+                <div class="project-card" style="animation-delay: 1.2s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>MedPartix</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Simplifie les annonces médicales, les consultations et les estimations avec QR codes.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/MedPartix-')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/MedPartix-')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DashExplorer -->
+                <div class="project-card" style="animation-delay: 1.3s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>DashExplorer</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Permet à vos clients de visualiser et d'analyser leurs données en temps réel.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Symfony</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MYSQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AngularDroneUI -->
+                <div class="project-card" style="animation-delay: 1.4s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>AngularDroneUI</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Interface Angular pour contrôler et suivre des drones en temps réel.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Loopback 4</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Agent Voiture -->
+                <div class="project-card" style="animation-delay: 1.5s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Agent Voiture</h3>
+                            <span class="project-updated">Updated May 2</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Calcul du carburant et coût de trajet selon voiture, distance, conso et prix.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Order Confirmation -->
+                <div class="project-card" style="animation-delay: 1.6s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Order Confirmation</h3>
+                            <span class="project-updated">Updated Apr 28</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Page HTML/CSS simple pour confirmer une commande. Responsive et facile à intégrer.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">Javascript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://dhiasaied.github.io/ORDER-CONFIRMATION/')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/ORDER-CONFIRMATION')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Application JSON -->
+                <div class="project-card" style="animation-delay: 1.7s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Application JSON</h3>
+                            <span class="project-updated">Updated Mar 12</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Generates fake JSON data for testing and app prototypes.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">JSON</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/application_json')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/application_json')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pottery App -->
+                <div class="project-card" style="animation-delay: 1.8s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Pottery App</h3>
+                            <span class="project-updated">Updated Mar 12</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Pottery App allows you to easily sell your pottery creations.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/pottery_app')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/pottery_app')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ChatMsg -->
+                <div class="project-card" style="animation-delay: 1.9s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>ChatMsg</h3>
+                            <span class="project-updated">Updated Mar 12</span>
+                        </div>
+                    </div>
+                    <p class="project-description">ChatMsg is a secure messaging app for exchanging texts, photos, videos, and files.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/chatmsg')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/chatmsg')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Snake App -->
+                <div class="project-card" style="animation-delay: 2.0s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Snake App</h3>
+                            <span class="project-updated">Updated Mar 12</span>
+                        </div>
+                    </div>
+                    <p class="project-description">SnakeApp is a classic snake game built with Flutter. Control the snake, eat food, and avoid obstacles.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/snake_app')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/snake_app')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Novo Edu -->
+                <div class="project-card" style="animation-delay: 2.1s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Novo Edu</h3>
+                            <span class="project-updated">Updated Sep 3, 2024</span>
+                        </div>
+                    </div>
+                    <p class="project-description">NovoEdu offers top-tier programs to enhance students' careers and skills.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">Javascript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Novo-Edu')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Novo-Edu')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projets Python -->
+                <div class="project-card" style="animation-delay: 2.2s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Projets Python</h3>
+                            <span class="project-updated">Updated Jul 3, 2024</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Collection of Python projects to practice different concepts.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tunisie Navette -->
+                <div class="project-card" style="animation-delay: 2.3s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>Tunisie Navette</h3>
+                            <span class="project-updated">Updated Jun 28, 2024</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Website to book your boats in Tunisia easily and quickly.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">Javscript</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Work Together Section -->
+    <section class="work-together-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-handshake"></i>
+                Let's Work Together
+            </h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <div class="contact-card">
+                    <span class="icon email"><i class="fas fa-envelope"></i></span>
+                    <span class="info">dhiasaied733@gmail.com</span>
+                </div>
+                <div class="contact-card">
+                    <span class="icon phone"><i class="fas fa-phone"></i></span>
+                    <span class="info">+216 92 021 578</span>
+                </div>
+                <div class="contact-card">
+                    <span class="icon location"><i class="fas fa-map-marker-alt"></i></span>
+                    <span class="info">Nabeul, Tunisia</span>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="eaf61891-0870-4b86-afa6-13a454c32a82">
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-tag"></i></span>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-comment"></i></span>
+                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            
+            <div class="container">
+                <div class="footer-main">
+                    <!-- About Me Column -->
+                    <div class="footer-column about-column">
+                        <div class="column-header">
+                            <h3>Saied Dhia</h3>
+                            <span class="title">Full Stack Developer</span>
+                        </div>            
+                        <div class="contact-info">
+                            <div class="contact-item" onclick="onEmailClick()">
+                                <i class="fas fa-envelope"></i>
+                                <span>Dhiasaied733@gmail.com</span>
+                            </div>
+                            <div class="contact-item" onclick="onPhoneClick()">
+                                <i class="fas fa-phone"></i>
+                                <span>92021578</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nabeul, Tunisia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column links-column">
+                        <div class="column-header">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <nav class="footer-nav">
+                            <a href="#home" class="nav-link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="#skills" class="nav-link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Skills</span>
+                            </a>
+                            <a href="#projects-uiux" class="nav-link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>UI/UX</span>
+                            </a>
+                            <a href="#projects" class="nav-link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Projects</span>
+                            </a>
+                            <a href="#contact" class="nav-link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Contact</span>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Social Media Column -->
+                    <div class="footer-column social-column">
+                        <div class="column-header">
+                            <h3>Connect With Me</h3>
+                        </div>
+                        <p class="social-description">Let's connect and collaborate on amazing projects!</p>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/dhiasaied" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               data-platform="github">
+                                <div class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="social-name">GitHub</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/saied-dhia/" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               data-platform="linkedin">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <span class="social-name">LinkedIn</span>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@devdhia" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               data-platform="tiktok">
+                                <div class="social-icon">
+                                    <i class="fab fa-tiktok"></i>
+                                </div>
+                                <span class="social-name">TikTok</span>
+                            </a>
+
+                            <a href="https://www.instagram.com/dhiaeddinesaied/" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               data-platform="instagram">
+                                <div class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <span class="social-name">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="copyright">
+                            <p>&copy; <span id="currentYear"></span> Saied Dhia. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
+
