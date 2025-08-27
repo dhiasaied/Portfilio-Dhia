@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
@@ -23,12 +25,8 @@
             </a>
 
             <!-- Mobile Menu Toggle -->
-            <button class="navbar-toggler collapsed" 
-                    type="button" 
-                    onclick="toggleMobileMenu()"
-                    aria-expanded="false"
-                    aria-controls="navbarNav"
-                    aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" onclick="toggleMobileMenu()" aria-expanded="false"
+                aria-controls="navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -36,46 +34,33 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" 
-                           href="#home" 
-                           onclick="scrollToSection('home')"
-                           data-section="home">
+                        <a class="nav-link active" href="#home" onclick="scrollToSection('home')" data-section="home">
                             <span class="nav-text">Home</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" 
-                           href="#skills" 
-                           onclick="scrollToSection('skills')"
-                           data-section="skills">
+                        <a class="nav-link" href="#skills" onclick="scrollToSection('skills')" data-section="skills">
                             <span class="nav-text">Skills</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" 
-                           href="#projects-uiux" 
-                           onclick="scrollToSection('projects-uiux')"
-                           data-section="projects-uiux">
+                        <a class="nav-link" href="#projects-uiux" onclick="scrollToSection('projects-uiux')"
+                            data-section="projects-uiux">
                             <span class="nav-text">UI/UX</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" 
-                           href="#projects" 
-                           onclick="scrollToSection('projects')"
-                           data-section="projects">
+                        <a class="nav-link" href="#projects" onclick="scrollToSection('projects')"
+                            data-section="projects">
                             <span class="nav-text">Projects</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" 
-                           href="#contact" 
-                           onclick="scrollToSection('contact')"
-                           data-section="contact">
+                        <a class="nav-link" href="#contact" onclick="scrollToSection('contact')" data-section="contact">
                             <span class="nav-text">Contact</span>
                         </a>
                     </li>
@@ -101,7 +86,7 @@
                 <div class="shape shape-4"></div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -111,10 +96,10 @@
                     </h1>
                     <h2 class="hero-subtitle">Full Stack Developer</h2>
                     <p class="hero-description">
-                        Passionate full-stack developer from Tunisia, creating innovative web solutions 
+                        Passionate full-stack developer from Tunisia, creating innovative web solutions
                         with modern technologies and creative design approaches.
                     </p>
-                    
+
                     <div class="hero-buttons">
                         <button class="btn btn-primary" onclick="contactMe()">
                             <i class="fas fa-envelope"></i>
@@ -133,7 +118,7 @@
                             <span class="cv-loading-text">Downloading CV...</span>
                         </div>
                     </div>
-                    
+
                     <div class="hero-stats">
                         <div class="stat">
                             <span class="stat-number">4+</span>
@@ -149,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-image">
                     <div class="profile-card">
                         <div class="profile-avatar">
@@ -158,7 +143,8 @@
                                 <div class="avatar-ring ring-2"></div>
                                 <div class="avatar-ring ring-3"></div>
                                 <div class="avatar-container">
-                                    <img src="https://avatars.githubusercontent.com/u/96437437?v=4" alt="Saied Dhia" class="avatar-image">
+                                    <img src="https://avatars.githubusercontent.com/u/96437437?v=4" alt="Saied Dhia"
+                                        class="avatar-image">
                                     <div class="avatar-glow"></div>
                                 </div>
                             </div>
@@ -191,7 +177,7 @@
                 <i class="fas fa-laptop-code"></i>
                 Technical Skills
             </h2>
-            
+
             <div class="skills-grid">
                 <!-- Angular -->
                 <div class="skill-item" style="animation-delay: 0s;">
@@ -372,7 +358,7 @@
                 <i class="fas fa-briefcase"></i>
                 Services
             </h2>
-            
+
             <div class="services-grid">
                 <!-- Web Development -->
                 <div class="service-card" style="animation-delay: 0s;">
@@ -420,7 +406,7 @@
                 <i class="fas fa-paint-brush"></i>
                 UI/UX Projects
             </h2>
-            
+
             <div class="uiux-grid">
                 <!-- AutiChef -->
                 <div class="uiux-card" style="animation-delay: 0s;">
@@ -432,11 +418,12 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">AutiChef</h3>
-                        <p class="uiux-description">AutiChef, an innovative digital platform designed to improve nutritional support for children with autism.</p>
-                        
+                        <p class="uiux-description">AutiChef, an innovative digital platform designed to improve
+                            nutritional support for children with autism.</p>
+
                         <div class="uiux-features">
                             <span class="feature-tag">Figma Design</span>
                             <span class="feature-tag">Digital Health</span>
@@ -446,17 +433,18 @@
                             <span class="feature-tag">Community</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-utensils"></i>
                             <h4>AutiChef</h4>
                             <p>Autism nutrition platform</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342376049034309632--FJG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342376049034309632--FJG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -474,11 +462,12 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">AI Chatbot UI Exploration</h3>
-                        <p class="uiux-description">An in-depth user interface exploration for an AI-powered chatbot.</p>
-                        
+                        <p class="uiux-description">An in-depth user interface exploration for an AI-powered chatbot.
+                        </p>
+
                         <div class="uiux-features">
                             <span class="feature-tag">Figma</span>
                             <span class="feature-tag">AI</span>
@@ -488,17 +477,18 @@
                             <span class="feature-tag">Innovation</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-robot"></i>
                             <h4>AI Chatbot UI Exploration</h4>
                             <p>AI Chatbot UI</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342363247867584512-9ekh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxui-figma-designinnovation-activity-7342363247867584512-9ekh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -516,11 +506,12 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">NewsAI360</h3>
-                        <p class="uiux-description">News reimagined through artificial intelligence with a modern and intuitive interface.</p>
-                        
+                        <p class="uiux-description">News reimagined through artificial intelligence with a modern and
+                            intuitive interface.</p>
+
                         <div class="uiux-features">
                             <span class="feature-tag">AI Integration</span>
                             <span class="feature-tag">Modern UI</span>
@@ -528,17 +519,18 @@
                             <span class="feature-tag">Real-time Updates</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-newspaper"></i>
                             <h4>NewsAI360</h4>
                             <p>Modern AI-powered news</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-productdesign-activity-7346354040567386113-LEEj')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-productdesign-activity-7346354040567386113-LEEj')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -556,11 +548,11 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">StockMind AI</h3>
                         <p class="uiux-description">Smart UI/UX interface for stock management with AI integration.</p>
-                        
+
                         <div class="uiux-features">
                             <span class="feature-tag">AI Analytics</span>
                             <span class="feature-tag">Stock Management</span>
@@ -568,17 +560,18 @@
                             <span class="feature-tag">Predictive Insights</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-boxes"></i>
                             <h4>StockMind AI</h4>
                             <p>Smart stock management</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-intelligenceartificielle-gestiondestocks-activity-7346014777988542466-9YVp')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-intelligenceartificielle-gestiondestocks-activity-7346014777988542466-9YVp')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -596,11 +589,12 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">TikTok AI Studio</h3>
-                        <p class="uiux-description">AI-based video generation studio inspired by TikTok, featuring advanced functionalities.</p>
-                        
+                        <p class="uiux-description">AI-based video generation studio inspired by TikTok, featuring
+                            advanced functionalities.</p>
+
                         <div class="uiux-features">
                             <span class="feature-tag">Video Generation</span>
                             <span class="feature-tag">AI Tools</span>
@@ -608,17 +602,18 @@
                             <span class="feature-tag">Creative Studio</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-video"></i>
                             <h4>TikTok AI Studio</h4>
                             <p>AI video studio</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-aidesign-activity-7343807036234633216--5FQ')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-aidesign-activity-7343807036234633216--5FQ')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -636,11 +631,12 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">Apple E-commerce Redesign</h3>
-                        <p class="uiux-description">Apple e-commerce redesign: immersive 3D UI/UX with integrated AI.</p>
-                        
+                        <p class="uiux-description">Apple e-commerce redesign: immersive 3D UI/UX with integrated AI.
+                        </p>
+
                         <div class="uiux-features">
                             <span class="feature-tag">3D Interface</span>
                             <span class="feature-tag">E-commerce</span>
@@ -648,17 +644,18 @@
                             <span class="feature-tag">Premium Design</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fab fa-apple"></i>
                             <h4>Apple E-commerce Redesign</h4>
                             <p>Immersive 3D e-commerce</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-productdesign-figma-activity-7343320966564872192-4msy')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-productdesign-figma-activity-7343320966564872192-4msy')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -676,11 +673,11 @@
                             <span class="badge-text">UI/UX</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-content">
                         <h3 class="uiux-title">OptiTrend AI</h3>
                         <p class="uiux-description">Strategic UX dashboard with AI for real-time trend analysis.</p>
-                        
+
                         <div class="uiux-features">
                             <span class="feature-tag">Real-time Analytics</span>
                             <span class="feature-tag">Trend Analysis</span>
@@ -688,17 +685,18 @@
                             <span class="feature-tag">AI Insights</span>
                         </div>
                     </div>
-                    
+
                     <div class="uiux-actions">
                         <!-- Remove the button from here -->
                     </div>
-                    
+
                     <div class="uiux-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-chart-line"></i>
                             <h4>OptiTrend AI</h4>
                             <p>Real-time AI analytics</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxuidesign-figma-designstrataezgique-activity-7342715470606753792-wSCL')">
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uxuidesign-figma-designstrataezgique-activity-7342715470606753792-wSCL')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -718,7 +716,8 @@
                     </div>
                     <div class="uiux-content">
                         <h3 class="uiux-title">PhotoStudio</h3>
-                        <p class="uiux-description">Bannière premium alliant design moderne, innovation visuelle et émotion pure.</p>
+                        <p class="uiux-description">Premium banner combining modern design, visual innovation and
+                            pure emotion.</p>
                         <div class="uiux-features">
                             <span class="feature-tag">Figma</span>
                             <span class="feature-tag">Banner Design</span>
@@ -733,8 +732,120 @@
                         <div class="overlay-content">
                             <i class="fas fa-camera-retro"></i>
                             <h4>PhotoStudio</h4>
-                            <p>Bannière premium moderne</p>
-                            <button class="btn-linkedin" title="View on LinkedIn" onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-productdesign-activity-7351294170084323328-TOlL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                            <p>Modern premium banner</p>
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiuxdesign-figma-productdesign-activity-7351294170084323328-TOlL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Potéria -->
+                <div class="uiux-card" style="animation-delay: 1.2s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">Potéria</h3>
+                        <p class="uiux-description">A pottery workshop blending traditional craft with a modern touch.</p>
+                        <div class="uiux-features">
+                            <span class="feature-tag">Figma Design</span>
+                            <span class="feature-tag">Craftsmanship</span>
+                            <span class="feature-tag">Branding</span>
+                            <span class="feature-tag">Contemporary Design</span>
+                        </div>
+                    </div>
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-wine-bottle"></i>
+                            <h4>Potéria</h4>
+                            <p>Contemporary pottery workshop</p>
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_designgraphique-uxui-branding-activity-7365424851513131008-gLFd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SkyTunisia -->
+                <div class="uiux-card" style="animation-delay: 1.35s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">SkyTunisia</h3>
+                        <p class="uiux-description">An airline offering elegant, comfortable, and modern travel with a seamless user experience.</p>
+                        <div class="uiux-features">
+                            <span class="feature-tag">Figma</span>
+                            <span class="feature-tag">UI Design</span>
+                            <span class="feature-tag">UX Design</span>
+                            <span class="feature-tag">Aviation</span>
+                        </div>
+                    </div>
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-plane"></i>
+                            <h4>SkyTunisia</h4>
+                            <p>Modern airline</p>
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_figma-conceptionfigma-uidesign-activity-7365428052291477506--OuY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
+                                <i class="fab fa-linkedin"></i>
+                                View on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PsyChrono -->
+                <div class="uiux-card" style="animation-delay: 1.5s;">
+                    <div class="uiux-header">
+                        <div class="uiux-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="uiux-badge">
+                            <span class="badge-text">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="uiux-content">
+                        <h3 class="uiux-title">PsyChrono</h3>
+                        <p class="uiux-description">Modern psychology site with an engaging, reassuring UX and intuitive navigation.</p>
+                        <div class="uiux-features">
+                            <span class="feature-tag">Figma</span>
+                            <span class="feature-tag">Psychologie</span>
+                            <span class="feature-tag">UX/UI</span>
+                            <span class="feature-tag">Web Design</span>
+                        </div>
+                    </div>
+                    <div class="uiux-actions">
+                        <!-- Remove the button from here -->
+                    </div>
+                    <div class="uiux-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-brain"></i>
+                            <h4>PsyChrono</h4>
+                            <p>Modern psychology platform</p>
+                            <button class="btn-linkedin" title="View on LinkedIn"
+                                onclick="openProject('https://www.linkedin.com/posts/saied-dhia_uiux-figma-webdesign-activity-7366270483031379968-Nyfl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEopQg8BsrWMlpMr12RwvRw6St6heTcED5o')">
                                 <i class="fab fa-linkedin"></i>
                                 View on LinkedIn
                             </button>
@@ -752,21 +863,51 @@
                 <i class="fas fa-rocket"></i>
                 Featured Projects
             </h2>
-            
+
             <div class="projects-grid">
 
-                  <!-- CodeAscend -->
-                  <div class="project-card" style="animation-delay: 2.4s;">
+                <!-- MamisAzules -->
+                <div class="project-card" style="animation-delay: 0s;">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="project-title-section">
+                            <h3>MamisAzules</h3>
+                            <span class="project-updated">Updated recently</span>
+                        </div>
+                    </div>
+                    <p class="project-description">An inclusive Flutter app for children with autism, featuring educational activities and interactive games.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/mamisazules')">
+                            <i class="fas fa-eye"></i>
+                            View
+                        </button>
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/mamisazules')">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CodeAscend -->
+                <div class="project-card" style="animation-delay: 2.4s;">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
                         <div class="project-title-section">
                             <h3>CodeAscend</h3>
-                            <span class="project-updated">Updated recently</span>
+                            <span class="project-updated">Updated 5 days ago</span>
                         </div>
                     </div>
-                    <p class="project-description">App Éducation Interactive – QCM pour apprendre et certifier vos compétences en web et mobile.</p>
+                    <p class="project-description">Interactive Education App – QCM to learn and certify your
+                        web and mobile skills.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Dart</span>
@@ -776,13 +917,14 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/codeascend')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/codeascend')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- NovaPlay -->
                 <div class="project-card" style="animation-delay: 0s;">
                     <div class="project-header">
@@ -794,7 +936,7 @@
                             <span class="project-updated">Updated 2 minutes ago</span>
                         </div>
                     </div>
-                    <p class="project-description">Plateforme de gaming moderne avec design 3D et derniers jeux.</p>
+                    <p class="project-description">Modern gaming platform with 3D design and latest games.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -805,7 +947,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/NovaPlay')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/NovaPlay')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -823,7 +966,7 @@
                             <span class="project-updated">Updated 2 minutes ago</span>
                         </div>
                     </div>
-                    <p class="project-description">GeoVision est un site interactif de géographie mondiale.</p>
+                    <p class="project-description">GeoVision is an interactive worldwide geography site.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -834,7 +977,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/GeoVision')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/GeoVision')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -852,7 +996,8 @@
                             <span class="project-updated">Updated 3 minutes ago</span>
                         </div>
                     </div>
-                    <p class="project-description">Nouvelle génération de YouTube avec interface moderne et fonctionnalités avancées.</p>
+                    <p class="project-description">Next generation YouTube with modern interface and
+                        advanced features.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -863,7 +1008,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/NeoTube')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/NeoTube')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -881,18 +1027,20 @@
                             <span class="project-updated">Updated last week</span>
                         </div>
                     </div>
-                    <p class="project-description">Plateforme étudiante pour gérer stages, PFE, présentations et visas à l'étranger.</p>
+                    <p class="project-description">Student platform to manage internships, final year projects, presentations and visas abroad.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">Node.js</span>
                         <span class="tech-badge">MySQL</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/StageConnect-')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -910,7 +1058,7 @@
                             <span class="project-updated">Updated 2 weeks ago</span>
                         </div>
                     </div>
-                    <p class="project-description">Calculatrice Flutter simple et efficace avec opérations mathématiques de base.</p>
+                    <p class="project-description">Simple and efficient Flutter calculator with basic mathematical operations.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Dart</span>
@@ -920,7 +1068,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Mathly')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/Mathly')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -938,18 +1087,20 @@
                             <span class="project-updated">Updated May 30</span>
                         </div>
                     </div>
-                    <p class="project-description">Site e-commerce WordPress pour Tesla Humanoid Robot AI au service de l'humanité.</p>
+                    <p class="project-description">WordPress e-commerce site for Tesla Humanoid Robot AI at the service of humanity.</p>
                     <div class="project-tech">
                         <span class="tech-badge">WordPress</span>
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">WooCommerce</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/Tesla_Humanoide_Robot_AI')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -967,18 +1118,21 @@
                             <span class="project-updated">Updated May 17</span>
                         </div>
                     </div>
-                    <p class="project-description">Dashboard Angular avec Node.js et MySQL pour gérer clients, utilisateurs et tutoriels.</p>
+                    <p class="project-description">Angular dashboard with Node.js and MySQL to manage clients,
+                        users and tutorials.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">Node.js</span>
                         <span class="tech-badge">MySQL</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/-Dashboard_Pro')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -996,7 +1150,8 @@
                             <span class="project-updated">Updated May 10</span>
                         </div>
                     </div>
-                    <p class="project-description">Boutique en ligne de cosmétiques, soins et accessoires, alliant beauté et élégance.</p>
+                    <p class="project-description">Online cosmetics, care and accessories store, combining
+                        beauty and elegance.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">TypeScript</span>
@@ -1006,7 +1161,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TuniChic')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/TuniChic')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1024,7 +1180,8 @@
                             <span class="project-updated">Updated May 6</span>
                         </div>
                     </div>
-                    <p class="project-description">Gérez vos projets et tâches facilement. Créez, suivez et modifiez en un clin d'œil!</p>
+                    <p class="project-description">Manage your projects and tasks easily. Create, track and modify at
+                        a glance!</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">TypeScript</span>
@@ -1034,7 +1191,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TaskFlow')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/TaskFlow')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1052,7 +1210,8 @@
                             <span class="project-updated">Updated May 4</span>
                         </div>
                     </div>
-                    <p class="project-description">Application pour contrôler, surveiller et optimiser tous les équipements de votre maison intelligente.</p>
+                    <p class="project-description">Application to control, monitor and optimize all
+                        equipment in your smart home.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Dart</span>
@@ -1062,7 +1221,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TechniHome')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/TechniHome')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1080,18 +1240,20 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">App mobile de gestion financière pour suivre vos dépenses et votre budget.</p>
+                    <p class="project-description">Mobile financial management app to track your expenses and budget.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Dart</span>
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">SQLite</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/GestionBudgetaire')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1109,7 +1271,8 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">Permet de consulter, vérifier, suivre les devises et recevoir des notifications facilement.</p>
+                    <p class="project-description">Allows you to consult, verify, track currencies and receive
+                        notifications easily.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Symfony</span>
                         <span class="tech-badge">PHP</span>
@@ -1120,7 +1283,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/ServeLink')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/ServeLink')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1138,7 +1302,8 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">Simplifie les annonces médicales, les consultations et les estimations avec QR codes.</p>
+                    <p class="project-description">Simplifies medical announcements, consultations and
+                        estimates with QR codes.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">TypeScript</span>
@@ -1148,7 +1313,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/MedPartix-')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/MedPartix-')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1166,18 +1332,21 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">Permet à vos clients de visualiser et d'analyser leurs données en temps réel.</p>
+                    <p class="project-description">Allows your clients to visualize and analyze their data in
+                        real time.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Symfony</span>
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">MYSQL</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/DashExplorer')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1195,18 +1364,21 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">Interface Angular pour contrôler et suivre des drones en temps réel.</p>
+                    <p class="project-description">Angular interface to control and track drones in real time.
+                    </p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">Loopback 4</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/AngularDroneUI')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1224,17 +1396,20 @@
                             <span class="project-updated">Updated May 2</span>
                         </div>
                     </div>
-                    <p class="project-description">Calcul du carburant et coût de trajet selon voiture, distance, conso et prix.</p>
+                    <p class="project-description">Fuel calculation and trip cost based on car, distance, consumption
+                        and price.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Angular</span>
                         <span class="tech-badge">TypeScript</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/agent-voiture')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1252,18 +1427,21 @@
                             <span class="project-updated">Updated Apr 28</span>
                         </div>
                     </div>
-                    <p class="project-description">Page HTML/CSS simple pour confirmer une commande. Responsive et facile à intégrer.</p>
+                    <p class="project-description">Simple HTML/CSS page to confirm an order. Responsive and
+                        easy to integrate.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
                         <span class="tech-badge">Javascript</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://dhiasaied.github.io/ORDER-CONFIRMATION/')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://dhiasaied.github.io/ORDER-CONFIRMATION/')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/ORDER-CONFIRMATION')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/ORDER-CONFIRMATION')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1288,11 +1466,13 @@
                         <span class="tech-badge">Dart</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/application_json')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/application_json')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/application_json')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/application_json')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1320,7 +1500,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/pottery_app')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/pottery_app')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1338,7 +1519,8 @@
                             <span class="project-updated">Updated Mar 12</span>
                         </div>
                     </div>
-                    <p class="project-description">ChatMsg is a secure messaging app for exchanging texts, photos, videos, and files.</p>
+                    <p class="project-description">ChatMsg is a secure messaging app for exchanging texts, photos,
+                        videos, and files.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Dart</span>
@@ -1348,7 +1530,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/chatmsg')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/chatmsg')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1366,7 +1549,8 @@
                             <span class="project-updated">Updated Mar 12</span>
                         </div>
                     </div>
-                    <p class="project-description">SnakeApp is a classic snake game built with Flutter. Control the snake, eat food, and avoid obstacles.</p>
+                    <p class="project-description">SnakeApp is a classic snake game built with Flutter. Control the
+                        snake, eat food, and avoid obstacles.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Flutter</span>
                         <span class="tech-badge">Dart</span>
@@ -1376,7 +1560,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/snake_app')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/snake_app')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1394,7 +1579,8 @@
                             <span class="project-updated">Updated Sep 3, 2024</span>
                         </div>
                     </div>
-                    <p class="project-description">NovoEdu offers top-tier programs to enhance students' careers and skills.</p>
+                    <p class="project-description">NovoEdu offers top-tier programs to enhance students' careers and
+                        skills.</p>
                     <div class="project-tech">
                         <span class="tech-badge">HTML</span>
                         <span class="tech-badge">CSS</span>
@@ -1405,7 +1591,8 @@
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Novo-Edu')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/Novo-Edu')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1428,11 +1615,13 @@
                         <span class="tech-badge">Python</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/Projets_Python')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1457,11 +1646,13 @@
                         <span class="tech-badge">Javscript</span>
                     </div>
                     <div class="project-actions">
-                        <button class="btn btn-small" onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
+                        <button class="btn btn-small"
+                            onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
                             <i class="fas fa-eye"></i>
                             View
                         </button>
-                        <button class="btn btn-small btn-outline" onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
+                        <button class="btn btn-small btn-outline"
+                            onclick="openProject('https://github.com/dhiasaied/TunisieNavette')">
                             <i class="fab fa-github"></i>
                             Code
                         </button>
@@ -1533,7 +1724,7 @@
                 <div class="gradient-orb orb-2"></div>
                 <div class="gradient-orb orb-3"></div>
             </div>
-            
+
             <div class="container">
                 <div class="footer-main">
                     <!-- About Me Column -->
@@ -1541,7 +1732,7 @@
                         <div class="column-header">
                             <h3>Saied Dhia</h3>
                             <span class="title">Full Stack Developer</span>
-                        </div>            
+                        </div>
                         <div class="contact-info">
                             <div class="contact-item" onclick="onEmailClick()">
                                 <i class="fas fa-envelope"></i>
@@ -1593,46 +1784,34 @@
                             <h3>Connect With Me</h3>
                         </div>
                         <p class="social-description">Let's connect and collaborate on amazing projects!</p>
-                        
+
                         <div class="social-links">
-                            <a href="https://github.com/dhiasaied" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="social-link"
-                               data-platform="github">
+                            <a href="https://github.com/dhiasaied" target="_blank" rel="noopener noreferrer"
+                                class="social-link" data-platform="github">
                                 <div class="social-icon">
                                     <i class="fab fa-github"></i>
                                 </div>
                                 <span class="social-name">GitHub</span>
                             </a>
 
-                            <a href="https://www.linkedin.com/in/saied-dhia/" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="social-link"
-                               data-platform="linkedin">
+                            <a href="https://www.linkedin.com/in/saied-dhia/" target="_blank" rel="noopener noreferrer"
+                                class="social-link" data-platform="linkedin">
                                 <div class="social-icon">
                                     <i class="fab fa-linkedin"></i>
                                 </div>
                                 <span class="social-name">LinkedIn</span>
                             </a>
 
-                            <a href="https://www.tiktok.com/@devdhia" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="social-link"
-                               data-platform="tiktok">
+                            <a href="https://www.tiktok.com/@devdhia" target="_blank" rel="noopener noreferrer"
+                                class="social-link" data-platform="tiktok">
                                 <div class="social-icon">
                                     <i class="fab fa-tiktok"></i>
                                 </div>
                                 <span class="social-name">TikTok</span>
                             </a>
 
-                            <a href="https://www.instagram.com/dhiaeddinesaied/" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="social-link"
-                               data-platform="instagram">
+                            <a href="https://www.instagram.com/dhiaeddinesaied/" target="_blank"
+                                rel="noopener noreferrer" class="social-link" data-platform="instagram">
                                 <div class="social-icon">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -1653,7 +1832,7 @@
             </div>
         </div>
     </footer>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
