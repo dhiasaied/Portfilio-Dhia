@@ -1144,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    'dior-homme': { post: '', images: 5, source: 'upload' },
     ferrova: { post: '', images: 5, source: 'upload' },
     zyvora: { post: '', images: 5, source: 'upload' },
     aistack: { post: 'https://www.linkedin.com/feed/update/urn:li:activity:7435502663473094658/', images: 7 },
@@ -1201,6 +1202,11 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'dior-homme', title: 'Dior Homme Intense', repo: 'Dior-Homme', cats: ['web', '3d'], updated: '2026-10', featured: true,
+      video: 'assets/projects/videos/dior-homme.mp4',
+      tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GLSL', 'GSAP', 'Lenis', 'CSS3', 'JavaScript'],
+      desc: 'Cinematic, noir-inspired 3D landing page for a luxury fragrance, presenting a procedurally modelled perfume bottle through scroll-driven choreography and a live colour atelier. An independent concept project, not affiliated with Parfums Christian Dior.',
+      features: ['Procedural 3D flacon built entirely in code: glass shell, transmissive amber juice, dip tube, lacquer cap and a canvas-drawn silver label', 'Studio lighting with Lightformer environment, palette-tinted rim lights, a custom GLSL eclipse halo, stone plinth and floating dust particles', 'Scroll choreography across five sections (Hero, Story, Notes, Craft, Shop) with per-section bottle pose, camera distance and halo intensity', 'Interactions: drag to rotate with inertia, tap to spray mist, pointer parallax and anatomy hotspots on the bottle', 'Shop with 50, 100 and 150 ml sizes that update the price and rescale the 3D bottle, plus an add-to-bag counter and toast', 'Colour atelier with six curated palettes and a custom mode that retints both the interface and the 3D scene, saved in the browser', 'Intro loader with curtain reveal, word-by-word headline reveals, Lenis smooth scrolling synced with GSAP ScrollTrigger and a custom cursor', 'Responsive layouts with separate mobile choreography and reduced motion support'] },
     { id: 'ferrova', title: 'FERROVA', repo: 'FERROVA-', cats: ['web', '3d'], updated: '2026-10', featured: true,
       video: 'assets/projects/videos/ferrova.mp4',
       tech: ['React 19', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Zustand', 'Delaunator', 'Vite', 'JavaScript'],
