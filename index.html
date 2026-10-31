@@ -1144,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    'dar-yasmine': { post: '', images: 6, source: 'upload' },
     'dior-homme': { post: '', images: 5, source: 'upload' },
     ferrova: { post: '', images: 5, source: 'upload' },
     zyvora: { post: '', images: 5, source: 'upload' },
@@ -1202,6 +1203,11 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'dar-yasmine', title: 'Dar Yasmine', repo: 'Dar-Yasmine', cats: ['web', '3d'], updated: '2026-10', featured: true,
+      video: 'assets/projects/videos/dar-yasmine.mp4',
+      tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Zustand', 'CSS3', 'JavaScript'],
+      desc: 'Interactive 3D luxury real-estate experience presenting a contemporary Tunisian villa in Sidi Bou Said, with a cinematic scroll-driven tour, free exploration, live colour customisation and day, golden hour and night lighting. Every element of the scene is generated in code, with no 3D model files or images.',
+      features: ['Procedural villa with Tunisian architecture: horseshoe arches, studded cobalt door, qubba dome, zellige courtyard fountain, living pavilion and infinity pool', 'Cinematic scroll tour across seven chapters, with the camera following spline paths, Lenis smooth scrolling synced with GSAP ScrollTrigger and a chapter progress rail', 'Explore mode with orbit, WASD walk and point and walk navigation, raycast collision detection and teleport shortcuts', '13 pulsing 3D hotspots that open detail cards, some with swatches to recolour that element in place', 'Colour studio with five Tunisian-inspired palettes and four fine-tunable colour roles that repaint both the 3D materials and the interface theme', 'Day, golden hour and night presets that animate the sun, sky, fog, interior lamps, glowing windows and pool, with stars at night', 'Private viewing request form, responsive layouts, adaptive resolution and touch-friendly navigation'] },
     { id: 'dior-homme', title: 'Dior Homme Intense', repo: 'Dior-Homme', cats: ['web', '3d'], updated: '2026-10', featured: true,
       video: 'assets/projects/videos/dior-homme.mp4',
       tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GLSL', 'GSAP', 'Lenis', 'CSS3', 'JavaScript'],
