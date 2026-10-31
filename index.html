@@ -502,6 +502,20 @@
   .stage-view { position: absolute; inset: 0; display: grid; place-items: center; padding: 22px 64px; }
   .stage-view img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .9); opacity: 0; transform: scale(.985); transition: opacity .35s ease, transform .45s var(--ease); }
   .stage-view img.shown { opacity: 1; transform: none; }
+  .stage-view video { max-width: 100%; max-height: 100%; width: 100%; height: auto; border-radius: 10px; background: #000; box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .9); opacity: 0; transition: opacity .35s ease; }
+  .stage-view video.shown { opacity: 1; }
+  .thumbs button.is-video { position: relative; }
+  .thumbs button.is-video svg { position: absolute; left: 50%; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; color: #fff; filter: drop-shadow(0 2px 6px rgba(0,0,0,.7)); }
+
+  /* Project video on cards: play button and muted hover preview */
+  .cover-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s ease; pointer-events: none; }
+  .cover-video.on { opacity: 1; }
+  .cover-play { position: absolute; left: 50%; top: 50%; z-index: 2; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: rgba(7,9,15,.55); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 12px 30px -10px rgba(0,0,0,.6); transition: transform .3s var(--ease), background .25s, opacity .3s; }
+  .cover-play svg { width: 22px; height: 22px; margin-left: 3px; }
+  .cover-play:hover { transform: scale(1.08); background: rgba(34,211,238,.85); color: #04121a; }
+  .pcard:hover .cover-play { opacity: .0; }
+  .pcard:hover .cover-play:hover, .cover-play:focus-visible { opacity: 1; }
+  @media (hover: none) { .pcard:hover .cover-play { opacity: 1; } }
   /* Full-page captures scroll vertically inside the stage */
   .stage.is-tall .stage-view { display: block; overflow-y: auto; overscroll-behavior: contain; padding: 22px 64px; scrollbar-width: thin; }
   .stage.is-tall .stage-view img { width: 100%; max-height: none; }
@@ -743,6 +757,7 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 12h.01M12 12h.01M16 12h.01"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95Z"/></symbol>
   <symbol id="i-pointer" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 9 5 12 1.8-5.2L21 14Z M7.2 2.2 8 5.1 M5.1 8l-2.9-.8 M14 4.1 12 6 M6 12l-1.9 2"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.6-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14Z"/></symbol>
   <symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
   <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
   <symbol id="i-wp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4.5 8.5 9 20M7 8.5h5M9.5 8.5 14 19l2.5-7.5M14.5 8.5h3.5M16 8.5 19.5 16"/></symbol>
@@ -1129,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    ferrova: { post: '', images: 5, source: 'upload' },
     aistack: { post: 'https://www.linkedin.com/feed/update/urn:li:activity:7435502663473094658/', images: 7 },
     animalia: { post: 'https://www.linkedin.com/feed/update/urn:li:activity:7428570279255195648/', images: 9 },
     autotech: { post: '', images: 5, source: 'upload' },
@@ -1184,6 +1200,11 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'ferrova', title: 'FERROVA', repo: 'FERROVA-', cats: ['web', '3d'], updated: '2026-10', featured: true,
+      video: 'assets/projects/videos/ferrova.mp4',
+      tech: ['React 19', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Zustand', 'Delaunator', 'Vite', 'JavaScript'],
+      desc: 'An interactive 3D digital wardrobe: browse a collection hanging on a steel rail inside a softly lit boutique, pull a piece forward, turn it in the light, switch its colourway and add it to the bag, all rendered in real time.',
+      features: ['Interactive clothing rail: drag, swipe, trackpad or arrow keys, with inertia and snapping to the nearest hanger', 'Nine garments modelled procedurally in code, each fabric with its own generated texture and material', 'Inspect mode: lift a piece toward the camera, rotate it freely and switch between three live colourways', 'Garment physics: pieces swing like pendulums and settle with a soft overshoot', 'Scroll-driven camera moving through four shots of the boutique', 'Detail panel with sizes, add to bag, toast confirmations and keyboard controls', 'Adaptive quality, chunked preloading and a graceful fallback without WebGL'] },
     { id: 'hamborghini', title: 'Hamborghini', repo: 'Hamborghini-', cats: ['web', '3d'], updated: '2026-10', featured: true,
       tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Three.js', 'Responsive UI'],
       desc: 'Premium dark-themed front end for a fictional gourmet burger atelier that blends hypercar aesthetics with culinary branding. It features an interactive Three.js burger visualizer, product catalog, cart, checkout, authentication and VIP membership.',
@@ -2600,6 +2621,15 @@
     if (m.post) p.linkedin = m.post;
     p.imageSource = m.source === 'upload' ? 'project screenshots' : 'LinkedIn post';
   });
+  // A project video plays as the first slide; its first still is the poster and thumbnail
+  const isVideo = src => /\.(mp4|webm)(\?|$)/i.test(src);
+  DEV.forEach(p => {
+    if (!p.video) return;
+    p.poster = (p.images && p.images[0]) || '';
+    p.images = [p.video, ...(p.images || [])];
+    p.thumbs = [(p.thumbs && p.thumbs[0]) || p.poster, ...(p.thumbs || p.images.slice(1))];
+    p.imageSource = 'video';
+  });
   $$('[data-track-count]').forEach(el => { el.textContent = el.dataset.trackCount === 'dev' ? DEV.length : UX.length; });
 
   const fmtDate = ym => { const [y, m] = ym.split('-'); return new Date(+y, +m - 1).toLocaleString('en', { month: 'short', year: 'numeric' }); };
@@ -2661,7 +2691,7 @@
       const feats = (p.features || []).length;
       return `
       <article class="card glow pcard dev-card enter" style="--d:${Math.min(i % PAGE, 8) * 0.04}s">
-        <div class="cover">${cover}<span class="badge" style="--c:${CAT_COLOR[cat]}"><i></i>${esc(p.cats.map(c => CAT_LABEL[c]).join(' · '))}</span>${p.featured ? `<span class="badge is-featured">${icon('i-star')}Featured</span>` : ''}${p.concept ? `<span class="badge shots">${icon('i-layers')}Concept cover</span>` : p.images && p.images.length > 1 ? `<span class="badge shots">${icon('i-image')}${p.images.length} screenshots</span>` : ''}</div>
+        <div class="cover"${p.video ? ` data-preview="${esc(p.video)}"` : ''}>${cover}${p.video ? `<button class="cover-play" type="button" data-open="${p.id}" aria-label="Play the ${esc(p.title)} video">${icon('i-play')}</button>` : ''}<span class="badge" style="--c:${CAT_COLOR[cat]}"><i></i>${esc(p.cats.map(c => CAT_LABEL[c]).join(' · '))}</span>${p.featured ? `<span class="badge is-featured">${icon('i-star')}Featured</span>` : ''}${p.video ? `<span class="badge shots">${icon('i-play')}Video · ${p.images.length - 1} stills</span>` : p.concept ? `<span class="badge shots">${icon('i-layers')}Concept cover</span>` : p.images && p.images.length > 1 ? `<span class="badge shots">${icon('i-image')}${p.images.length} screenshots</span>` : ''}</div>
         <div class="pbody">
           <div class="ptop"><h3>${esc(p.title)}</h3><span class="year">${fmtDate(p.updated)}</span></div>
           <p>${esc(p.desc)}</p>
@@ -2759,6 +2789,20 @@
     openProject(card.querySelector('[data-open]').dataset.open);
   });
   $('#dev-grid').addEventListener('click', e => { const b = e.target.closest('[data-open]'); if (b) openProject(b.dataset.open); });
+  // Muted hover preview for project videos (mouse devices only; the file loads on first hover)
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
+    $('#dev-grid').addEventListener('pointerover', e => {
+      const cover = e.target.closest('.cover[data-preview]');
+      if (!cover || cover.querySelector('video')) return;
+      const v = document.createElement('video');
+      Object.assign(v, { src: cover.dataset.preview, muted: true, loop: true, playsInline: true, autoplay: true, preload: 'auto' });
+      v.className = 'cover-video';
+      v.setAttribute('aria-hidden', 'true');
+      v.addEventListener('playing', () => v.classList.add('on'), { once: true });
+      cover.insertBefore(v, cover.firstChild.nextSibling);
+      cover.addEventListener('pointerleave', () => { v.classList.remove('on'); setTimeout(() => v.remove(), 300); }, { once: true });
+    });
+  }
 
   /* ---------- Project modal: gallery, details, accessible open/close ---------- */
   const modal = $('#modal');
@@ -2770,6 +2814,7 @@
   function preload(i) {
     if (gallery.length < 2) return;
     const src = gallery[(i + gallery.length) % gallery.length];
+    if (isVideo(src)) return;
     const im = new Image(); im.decoding = 'async'; im.src = src;
   }
 
@@ -2777,6 +2822,17 @@
     if (!gallery.length) return;
     gIndex = (i + gallery.length) % gallery.length;
     const src = gallery[gIndex];
+    if (isVideo(src)) {
+      // Video slide: muted autoplay loop with native controls; replacing the slide stops it
+      const v = document.createElement('video');
+      Object.assign(v, { src, muted: true, loop: true, playsInline: true, autoplay: !reduceMotion, controls: true, preload: 'auto' });
+      if (current.poster) v.poster = current.poster;
+      v.setAttribute('aria-label', `Video walkthrough of ${current.title}`);
+      stage.classList.remove('is-tall');
+      $('#m-tall') && ($('#m-tall').hidden = true);
+      view.replaceChildren(v);
+      requestAnimationFrame(() => v.classList.add('shown'));
+    } else {
     const img = new Image();
     img.decoding = 'async';
     img.alt = `Screenshot ${gIndex + 1} of ${gallery.length} of ${current.title}`;
@@ -2791,6 +2847,7 @@
     };
     img.onerror = () => { view.replaceChildren(); view.insertAdjacentHTML('beforeend', slot(current)); };
     img.src = src;
+    }
     stageBg.style.backgroundImage = `url("${(thumbs[gIndex] || src).replace(/"/g, '%22')}")`;
     fullLink.href = src;
     $('#m-count').textContent = `${pad(gIndex + 1)} / ${pad(gallery.length)}`;
@@ -2844,8 +2901,10 @@
       : '';
     const thumbBar = $('#m-thumbs');
     thumbBar.hidden = !many;
-    thumbBar.innerHTML = many ? thumbs.map((src, k) =>
-      `<button type="button" data-slide="${k}" aria-label="Show image ${k + 1} of ${gallery.length}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"/></button>`).join('') : '';
+    thumbBar.innerHTML = many ? thumbs.map((src, k) => {
+      const vid = isVideo(gallery[k]);
+      return `<button type="button" data-slide="${k}"${vid ? ' class="is-video"' : ''} aria-label="${vid ? 'Play the video' : `Show image ${k + 1} of ${gallery.length}`}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"/>${vid ? icon('i-play') : ''}</button>`;
+    }).join('') : '';
     stage.classList.remove('is-tall');
     const note = $('#m-note');
     if (gallery.length) {
@@ -2855,6 +2914,7 @@
         ? `Concept cover designed for this portfolio from the project's name and description. It is not a screenshot of the application.${p.demo ? ' Use Live Demo to see the real project.' : ''}`
         : fromLinkedIn
         ? `Original visuals from the LinkedIn post.${p.linkedin ? ` <a href="${esc(p.linkedin)}" target="_blank" rel="noopener">Open original post ${icon('i-external')}</a>` : ''}`
+        : p.imageSource === 'video' ? 'Original video walkthrough of the project, followed by stills from the same recording.'
         : p.imageSource === 'repository README' ? 'Screenshot from the repository README.' : 'Original project screenshots.';
       note.innerHTML = `<span>${source}</span>`;
     } else {
@@ -2909,7 +2969,7 @@
   prevBtn.addEventListener('click', () => showSlide(gIndex - 1));
   nextBtn.addEventListener('click', () => showSlide(gIndex + 1));
   modal.addEventListener('keydown', e => {
-    if (gallery.length < 2 || e.target.closest('input, textarea')) return;
+    if (gallery.length < 2 || e.target.closest('input, textarea, video')) return;
     if (e.key === 'ArrowRight') { e.preventDefault(); showSlide(gIndex + 1); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); showSlide(gIndex - 1); }
   });
