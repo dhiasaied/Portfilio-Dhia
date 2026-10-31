@@ -805,7 +805,7 @@
             <a class="btn btn-ghost" href="#contact">Let's talk</a>
           </div>
           <dl class="hero-stats reveal" style="--d:.4s">
-            <div class="stat"><dt class="sr-only">Public repositories</dt><dd><b data-count="repos">0</b><span>public GitHub repositories</span></dd></div>
+            <div class="stat"><dt class="sr-only">Public GitHub projects</dt><dd><b data-count="repos">0</b><span>public GitHub projects</span></dd></div>
             <div class="stat"><dt class="sr-only">Figma case studies</dt><dd><b data-count="uiux">0</b><span>Figma case studies</span></dd></div>
             <div class="stat"><dt class="sr-only">Roles</dt><dd><b data-count-static="6">0</b><span>professional roles &amp; internships</span></dd></div>
             <div class="stat"><dt class="sr-only">Languages</dt><dd><b data-count-static="4">0</b><span>spoken languages</span></dd></div>
@@ -1194,7 +1194,7 @@
    */
   const CONCEPT_COVERS = ['portfolio-v1', 'petitpas', 'gymly', 'codeascend', 'stageconnect', 'mathly', 'tesla', 'dashpro',
     'tunichic', 'taskflow', 'technihome', 'budget', 'servelink', 'medpartix', 'dashexplorer', 'droneui', 'agentvoiture',
-    'appjson', 'pottery', 'chatmsg', 'snake', 'novoedu', 'python', 'apc'];
+    'appjson', 'pottery', 'chatmsg', 'snake', 'novoedu', 'python', 'apc', 'vela'];
 
   const img = (key, n) => Array.from({ length: n }, (_, i) => `assets/linkedin/${key}-${i + 1}.jpg`);
 
@@ -1210,7 +1210,7 @@
       video: 'assets/projects/videos/zyvora.mp4',
       tech: ['React 18', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Zustand', 'Vite', 'JavaScript'],
       desc: 'Interactive 3D landing page for Zyvora, a concept ladybug-inspired micro-drone, with a procedural rigged 3D model, scroll-driven choreography, a live colour customiser and responsive design.',
-      features: ['Procedural, rigged 3D ladybug with no model files: clearcoat shell, hinged elytra, iridescent veined wings, articulated legs and emissive optics', 'Scroll choreography: each section has its own pose (position, rotation, shell open, wings unfolded, wingbeat) that blends across section boundaries', 'Interactions: pointer parallax, drag to rotate, click or tap to deploy the drone, and anatomy hotspots', 'Shell Lab colour customiser with six presets, live shell, accent and backdrop pickers, saved in the browser', 'Studio lighting with environment reflections, palette-tinted rim lights, contact shadows and dust particles', 'GSAP intro curtain, split-line hero reveal, animated counters, FAQ accordion and mobile menu', 'Adaptive resolution and lighter geometry on mobile for smooth performance'] },
+      features: ['Procedural, rigged 3D ladybug with no model files: clearcoat shell, hinged wing covers, iridescent veined wings, articulated legs and emissive optics', 'Scroll choreography: each section has its own pose (position, rotation, shell open, wings unfolded, wingbeat) that blends across section boundaries', 'Interactions: pointer parallax, drag to rotate, click or tap to deploy the drone, and anatomy hotspots', 'Shell Lab colour customiser with six presets, live shell, accent and backdrop pickers, saved in the browser', 'Studio lighting with environment reflections, palette-tinted rim lights, contact shadows and dust particles', 'GSAP intro curtain, split-line hero reveal, animated counters, FAQ accordion and mobile menu', 'Adaptive resolution and lighter geometry on mobile for smooth performance'] },
     { id: 'hamborghini', title: 'Hamborghini', repo: 'Hamborghini-', cats: ['web', '3d'], updated: '2026-10', featured: true,
       tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Three.js', 'Responsive UI'],
       desc: 'Premium dark-themed front end for a fictional gourmet burger atelier that blends hypercar aesthetics with culinary branding. It features an interactive Three.js burger visualizer, product catalog, cart, checkout, authentication and VIP membership.',
@@ -1235,6 +1235,10 @@
       tech: ['Flutter', 'Dart', 'Provider', 'SharedPreferences', 'Material 3'],
       desc: 'Cross-platform fitness app presented as "your intelligent fitness coach", offering personalised training programmes, progress tracking and a virtual AI coach in a dark, performance-oriented UI.',
       features: ['Training programmes filterable by goal', 'Visual, motivating progress tracking', 'Rule-based AI coach that adapts sessions (extensible to an LLM API)', 'Local persistence with SharedPreferences', 'Dark Material 3 interface'] },
+    { id: 'vela', title: 'Vela', repo: 'Vela-', cats: ['mobile'], updated: '2026-10', featured: true,
+      tech: ['Flutter', 'Dart', 'Material 3', 'CustomPainter', 'InheritedNotifier'],
+      desc: 'Premium Flutter parcel-tracking app ("Every parcel, in real time") with a live courier map, animated shipment timelines, in-app courier chat and a dynamic theme studio. A self-contained front-end showcase with simulated courier movement and in-memory sample data, built with no third-party packages.',
+      features: ['Custom-painted, zoomable city map with a courier marker that glides between simulated GPS fixes and rotates to its heading', 'Draggable tracking sheet with countdown ETA, animated progress stepper and shipment history timeline', 'Track by ID search, LIVE delivery card and filterable shipment lists with swipe-to-save', 'Send a Parcel form with size and speed options, insurance toggle and an animated price counter', 'Courier chat with quick replies and an inbox with read/unread notifications', 'Theme studio with 8 gradient presets, custom hue/saturation/brightness picker and dark mode', 'Lightweight architecture on ChangeNotifier and InheritedNotifier, targeting Android, iOS and Web'] },
     { id: 'motomarine', title: 'Motomarine', repo: 'Motomarine', cats: ['web', '3d'], updated: '2026-10', featured: true,
       tech: ['HTML5', 'CSS', 'JavaScript', 'Three.js', 'WebGL'],
       desc: 'High-impact brand landing page for next-generation personal watercraft, presenting performance, design, marine technology and the model line-up over WebGL ocean visuals.',
