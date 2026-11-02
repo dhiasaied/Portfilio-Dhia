@@ -1144,6 +1144,8 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    tunera: { post: '', images: 6, source: 'upload' },
+    nuvilo: { post: '', images: 6, source: 'upload' },
     'dar-yasmine': { post: '', images: 6, source: 'upload' },
     'dior-homme': { post: '', images: 5, source: 'upload' },
     ferrova: { post: '', images: 5, source: 'upload' },
@@ -1203,6 +1205,16 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'tunera', title: 'TUNÉRA Portfolio', repo: 'Tunera-Portfolio', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/tunera.mp4',
+      tech: ['Angular 17', 'TypeScript', 'Three.js', 'RxJS', 'SCSS', 'Angular Signals', 'WebGL'],
+      desc: 'Interactive developer portfolio you can read or drive: scroll through an editorial profile, or take a procedurally modelled Mercedes-Benz CLE Coupé through a real-time 3D city of Nabeul, where each of ten checkpoints opens a portfolio chapter. Its visual identity draws on Tunisian heritage with solid colours only.',
+      features: ['Profile mode with animated sections: arch-framed hero, about, SVG Nabeul skyline, services, featured work, activity feed, experience, education, certifications, skills, languages and contact', 'Drive mode: procedurally generated 3D Nabeul with the monumental jar, minaret, ceramics souk, business district and palm-lined corniche', 'Arcade driving model with boost, handbrake and building collisions, plus a chase camera that avoids clipping', 'Ten checkpoints that open portfolio sections in a side panel, with mini-map, speedometer, discovery progress and fast travel', 'Garage with an interactive 3D turntable of the car and five paint finishes', 'Command palette (Ctrl/Cmd + K), auto-hiding navigation, custom cursor, magnetic buttons and reveal-on-scroll', 'Standalone components, signals and content as typed data, with lazy-loaded 3D, instanced rendering, touch controls and reduced motion support'] },
+    { id: 'nuvilo', title: 'Nuvilo', repo: 'Nuvilo', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/nuvilo.mp4',
+      tech: ['React 19', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Web Audio API', 'Lucide', 'JavaScript'],
+      desc: 'Hand-built 3D browser arcade with twelve original mini-games set inside a real-time, scroll-driven 3D world. All models are built procedurally from Three.js primitives and all music and sound effects are synthesised at runtime, with no external images, videos or audio files.',
+      features: ['Procedural 3D "NUVILO" wordmark and interactive toy props that bounce, spin and jump with matching sounds', 'Scroll-driven camera gliding between keyframed viewpoints, with Lenis smooth scrolling synced to GSAP ScrollTrigger and pointer parallax', 'Twelve original games in their own 3D scenes, loaded on demand: Pop Rush, Flip Vault, Tri Grid, Echo Pads, Dice Duel, Glow Grid, Sky Catch, Lane Dash, Brick Burst, Arc Shot, Tilt Maze and Flow Turn', 'Full-screen game modal with how-to-play panel, live and best scores saved locally, and keyboard, mouse and touch controls', 'Nuvilo Daily: a chiptune composed for the current date with a live equaliser, a daily riddle, a game of the day and a visit streak', 'Searchable, category-filtered game grid with 3D tilt cards and best-score badges', 'Synthesised sound effects with a global sound toggle, separate mobile and desktop camera keyframes and reduced motion support'] },
     { id: 'dar-yasmine', title: 'Dar Yasmine', repo: 'Dar-Yasmine', cats: ['web', '3d'], updated: '2026-10', featured: true,
       video: 'assets/projects/videos/dar-yasmine.mp4',
       tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Lenis', 'Zustand', 'CSS3', 'JavaScript'],
