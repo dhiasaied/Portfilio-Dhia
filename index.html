@@ -1144,6 +1144,8 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    symbora: { post: '', images: 6, source: 'upload' },
+    gelora: { post: '', images: 6, source: 'upload' },
     tunera: { post: '', images: 4, source: 'upload' },
     nuvilo: { post: '', images: 6, source: 'upload' },
     'dar-yasmine': { post: '', images: 6, source: 'upload' },
@@ -1205,6 +1207,16 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'symbora', title: 'Symbora', repo: 'Symbora', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/symbora.mp4',
+      tech: ['Angular 21', 'TypeScript', 'Three.js', 'GSAP', 'Lenis', 'RxJS', 'Web Workers', 'SCSS'],
+      desc: 'Interactive 3D human anatomy atlas: rotate, peel back and dissect a living male or female body across 8 systems and 83 structures, with guided tours, quizzes and an animated heartbeat and breathing. Every bone, muscle, organ, vessel and nerve is generated procedurally at runtime, with no 3D model files.',
+      features: ['Cinematic scroll-driven landing page where the camera travels around the body, peels it layer by layer and zooms into the heart, lungs and nervous system', '83 structures across 8 body systems, with male and female models, built from signed distance fields and polygonised by a custom Surface Nets mesher in parallel Web Workers', 'Click any structure for its Latin name, function and facts, with focus, isolate, hover tooltips, floating labels and a search palette (Ctrl + K)', 'Per-system visibility and opacity, a virtual dissection slider, sagittal, coronal and transverse section planes, X-ray mode and a measure tool', 'Living physiology: beating heart with adjustable rate, breathing lungs and diaphragm, animated blood flow and nerve impulses', 'Learning modes: ten-question quizzes, five narrated guided tours and a side-by-side male and female compare view, with deep links', 'Signals-based zoneless Angular, physically based shader-patched materials, glassmorphism UI and reduced motion support'] },
+    { id: 'gelora', title: 'GELORA', repo: 'GELORA', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/gelora.mp4',
+      tech: ['Angular 19', 'TypeScript', 'Three.js', 'GSAP', 'Lenis', 'RxJS', 'SCSS', 'WebGL'],
+      desc: 'Immersive, scroll-driven gelateria website where a clay-figurine gelatiere builds a gelato cone in real-time 3D as you scroll, and a live flavor palette recolors both the interface and the 3D scene. The whole world is generated procedurally in code, with no 3D model files or image textures.',
+      features: ['Four-step scroll story (the cone, the scoop, the dip, the crunch) on a sticky WebGL canvas, with a step rail, pagination dots and changing step copy', 'Procedural gelatiere with a clay material, two-bone inverse kinematics, a walk cycle, head tracking and blinking', 'Custom chocolate shader with a poured, dripping edge, instanced pistachio pieces and a Catmull-Rom camera path with pointer parallax', 'Flavor palette selector with six presets, a free colour picker, hex input and a "Surprise me" option, saved between visits', 'Content sections: velocity-reactive marquee, 3D tilt flavor cards, pinned horizontal Craft section with count-up stats, word-by-word story reveal and a validated order form', 'Preloader with curtain transition, frosted-glass navigation with full-screen menu, magnetic buttons, custom cursor and film-grain overlay', 'Signals-based state, render loop outside Angular change detection, depth of field on desktop, reduced motion support and a WebGL fallback'] },
     { id: 'tunera', title: 'TUNÉRA Portfolio', repo: 'Tunera-Portfolio', cats: ['web', '3d'], updated: '2026-11', featured: true,
       video: 'assets/projects/videos/tunera.mp4',
       tech: ['Angular 17', 'TypeScript', 'Three.js', 'RxJS', 'SCSS', 'Angular Signals', 'WebGL'],
