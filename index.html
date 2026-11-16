@@ -1144,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    cybertruck: { post: '', images: 4, source: 'upload' },
     tendrix: { post: '', images: 8, source: 'upload' },
     zyntara: { post: '', images: 8, source: 'upload' },
     veltron: { post: '', images: 6, source: 'upload' },
@@ -1210,6 +1211,11 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'cybertruck', title: 'Cybertruck 3D', repo: 'Cybertruck-3D', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/cybertruck.mp4',
+      tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Zustand', 'JavaScript', 'CSS3'],
+      desc: 'Interactive 3D teardown of the Cybertruck: scroll through a cinematic film, compare specs, estimate range and customise its finish, all rendered live in the browser from a procedurally built model. A fan-made concept, not affiliated with or endorsed by Tesla.',
+      features: ['Procedural, real-scale truck built in code: opening doors and frunk, skateboard chassis with battery and motors, and detailed all-terrain wheels with instanced tread', 'Twelve-chapter scroll-scrubbed teardown film: garage reveal, profile turn, exploded view and close-ups of the wheels, drive unit and vault', 'Scrambled-word wipes between 3D sets, callout cards that track points on the moving truck, and drag to rotate with inertia', 'Live gallery renders that turn toward the pointer, a highlights carousel and a specs explorer with filters, search and trim comparison', 'Range estimator from speed, temperature, load and aero covers, plus a finish configurator, saved builds and share links', 'Command palette, English and French, imperial and metric units, dark and light themes, and keyboard shortcuts', 'Multi-viewport rendering with Drei View, Zustand state persisted locally, accessible dialogs and reduced motion support'] },
     { id: 'tendrix', title: 'TENDRIX', repo: 'TENDRIX-', cats: ['web'], updated: '2026-11', featured: true,
       tech: ['Symfony 7.4', 'PHP 8.2', 'API Platform 4', 'Angular 19', 'TypeScript', 'PostgreSQL', 'Redis', 'Doctrine ORM', 'Symfony Messenger', 'Claude API', 'Docker', 'PHPUnit', 'PHPStan', 'GitLab CI'],
       desc: 'AI-powered vendor management platform for IT services procurement: publish tenders, match consultants with explainable AI scoring, manage contracts and invoices, and track supplier performance, all in one secure multi-tenant workspace with a separate space for requesters, buyers, suppliers and admins.',
