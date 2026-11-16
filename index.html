@@ -1144,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    arduvia: { post: '', images: 8, source: 'upload' },
     cybertruck: { post: '', images: 4, source: 'upload' },
     tendrix: { post: '', images: 8, source: 'upload' },
     zyntara: { post: '', images: 8, source: 'upload' },
@@ -1211,6 +1212,10 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'arduvia', title: 'ARDUVIA', repo: 'ARDUVIA', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      tech: ['Angular 20', 'TypeScript', 'Three.js', 'GSAP', 'SCSS', 'Symfony 7.3', 'PHP 8.2', 'Doctrine ORM', 'SQLite', 'Claude API', 'PHPUnit'],
+      desc: 'Interactive 3D learning platform for Arduino beginners: build circuits on illustrated workbenches, write code and watch it run on a virtual board, solve challenges that are verified automatically, track progress and get help from an AI tutor, in English, French, Spanish and Arabic.',
+      features: ['16 progressive lessons, from meeting the Arduino Uno to building an ultrasonic parking sensor, each with overview, pinout, code walkthrough, specs and a challenge', 'Procedurally generated, toon-shaded 3D workbenches with labels, a part inspector, minimap, circuit schematic, animated current flow and LEDs that cast coloured light', 'Custom Arduino C++ interpreter that drives the virtual board: LEDs, motors, servos, steppers, buzzers and a serial monitor', 'Code editor with autocomplete, live diagnostics and a debugger with breakpoints, stepping, speed control and live variables', 'Challenges verified automatically from the circuit behaviour, with XP, levels, achievements, day streaks and a learning dashboard', 'AI learning assistant powered by Claude that explains code, decodes errors and gives hints, with a built-in offline tutor as fallback', 'Symfony REST API for anonymous progress and settings, four languages with localised URLs and full right-to-left Arabic layout, and reduced motion support'] },
     { id: 'cybertruck', title: 'Cybertruck 3D', repo: 'Cybertruck-3D', cats: ['web', '3d'], updated: '2026-11', featured: true,
       video: 'assets/projects/videos/cybertruck.mp4',
       tech: ['React 18', 'Vite', 'Three.js', 'React Three Fiber', 'Drei', 'GSAP', 'Zustand', 'JavaScript', 'CSS3'],
