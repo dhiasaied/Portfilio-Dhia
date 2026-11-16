@@ -1144,6 +1144,9 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    tendrix: { post: '', images: 8, source: 'upload' },
+    zyntara: { post: '', images: 8, source: 'upload' },
+    veltron: { post: '', images: 6, source: 'upload' },
     symbora: { post: '', images: 6, source: 'upload' },
     gelora: { post: '', images: 6, source: 'upload' },
     tunera: { post: '', images: 4, source: 'upload' },
@@ -1207,6 +1210,19 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'tendrix', title: 'TENDRIX', repo: 'TENDRIX-', cats: ['web'], updated: '2026-11', featured: true,
+      tech: ['Symfony 7.4', 'PHP 8.2', 'API Platform 4', 'Angular 19', 'TypeScript', 'PostgreSQL', 'Redis', 'Doctrine ORM', 'Symfony Messenger', 'Claude API', 'Docker', 'PHPUnit', 'PHPStan', 'GitLab CI'],
+      desc: 'AI-powered vendor management platform for IT services procurement: publish tenders, match consultants with explainable AI scoring, manage contracts and invoices, and track supplier performance, all in one secure multi-tenant workspace with a separate space for requesters, buyers, suppliers and admins.',
+      features: ['Full procurement chain: tenders, consultant proposals, contracts, invoicing and supplier performance scorecards', 'Business lifecycles as Symfony Workflow state machines with role guards, business rules and a single transition endpoint', 'AI agents built on Claude: a tender writer, an explainable 0 to 100 matching score (adjustable by at most 10 points) and a fair daily rate suggestion, each with a deterministic fallback', 'Event-driven architecture: domain events published after commit to Symfony Messenger for async AI scoring, notifications and audit', 'Security by design: HttpOnly JWT cookies with server-side revocation, row-level tenant isolation, field-level confidentiality and pseudonymised CVs before the LLM', 'Automatic contract generation on acceptance, gapless invoice numbering capped by contract days, and a full audit trail in the admin space', 'Angular 19 front end with standalone components, signals and lazy routes, plus PHPUnit tests, PHPStan level 6, GitLab CI, Docker and Sentry'] },
+    { id: 'zyntara', title: 'ZYNTARA', repo: 'ZYNTARA', cats: ['web'], updated: '2026-11', featured: true,
+      tech: ['React 19', 'TypeScript', 'Tailwind CSS', 'Symfony 7.4', 'API Platform 4', 'Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'pgvector', 'Redis', 'Mercure', 'Docker'],
+      desc: 'Agentic AI studio to build, run and observe AI applications, from a single prompt to autonomous agents with tools, document-grounded answers (RAG) and multi-agent teams. Three services (a React app, a Symfony API and a Python LangGraph agents service) work together, and every run is streamed step by step, stored and analysed.',
+      features: ['The AI ladder as working features: playground prompts, AI apps, tools, RAG knowledge bases, autonomous agents and multi-agent crews', 'Five-step agent builder (prompt, model, tools, knowledge, autonomy) with templates and a live preview of the resulting rung', 'Knowledge bases: upload PDF, Markdown, CSV and more, then chunk, embed into pgvector and test retrieval, with cited sources in answers', 'Autonomous LangGraph agents that plan, call tools, observe and self-review, and crews of two to eight agents led by a supervisor', 'Live reasoning timeline over Mercure with streamed tokens, plus a full run history with traces, tokens, duration, stop and run again', 'Provider-agnostic models (OpenAI, Anthropic, Ollama or a built-in offline model), dashboard, analytics, notifications and admin health view', 'Production-minded: JWT auth with roles, multi-tenant isolation, async jobs with Messenger, rate limiting, Docker Compose and automated tests'] },
+    { id: 'veltron', title: 'VELTRON', repo: 'VELTRON', cats: ['web', '3d'], updated: '2026-11', featured: true,
+      video: 'assets/projects/videos/veltron.mp4',
+      tech: ['Symfony 7.4', 'PHP 8.2', 'Twig', 'Doctrine ORM', 'SQLite', 'Three.js', 'GSAP', 'Lenis', 'JavaScript', 'PHPUnit'],
+      desc: 'Cinematic barbershop website for a fictional Brooklyn shop, pairing real-time 3D, a cursor-following spotlight and scroll-driven animation with a fully working online booking system: live availability per barber, a $10 deposit hold and gift cards. Every 3D object is built procedurally in code.',
+      features: ['Canvas intro where a clipper shaves a lane through a hair texture to reveal a procedural 3D barber chair lit by a spotlight that follows the cursor', 'Interactive 3D throughout: tools that follow the cursor over the price list, rotating products on spotlit plinths and a brushed-metal gift card that tilts and flips', 'Four-step booking drawer: service, barber or first free chair, day and time, contact details and confirmation', 'Live availability from opening hours, slot length and existing bookings, with double-booking protection in a database transaction (409 Conflict)', 'Calendar (.ics) export, gift cards with unique codes, a pick-up bag and live "next free chair" indicators', 'Barbers, lookbook with front and back views, memberships, reviews, animated map route and FAQ, all fed from a single catalog', 'Symfony JSON API with Doctrine and SQLite, AssetMapper import map (no Node build), PHPUnit API tests, schema.org data and reduced motion support'] },
     { id: 'symbora', title: 'Symbora', repo: 'Symbora', cats: ['web', '3d'], updated: '2026-11', featured: true,
       video: 'assets/projects/videos/symbora.mp4',
       tech: ['Angular 21', 'TypeScript', 'Three.js', 'GSAP', 'Lenis', 'RxJS', 'Web Workers', 'SCSS'],
