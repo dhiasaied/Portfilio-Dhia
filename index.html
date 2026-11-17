@@ -1144,6 +1144,7 @@
    */
   /* DEV_MEDIA:START */
   const DEV_MEDIA = {
+    bottleqc: { post: '', images: 6, source: 'upload' },
     arduvia: { post: '', images: 8, source: 'upload' },
     cybertruck: { post: '', images: 4, source: 'upload' },
     tendrix: { post: '', images: 8, source: 'upload' },
@@ -1212,6 +1213,10 @@
   /* Every entry comes from a public repository, its README, or a LinkedIn post. */
   const PROJECTS = [
     // ---------- Featured repositories (detailed READMEs) ----------
+    { id: 'bottleqc', title: 'BottleQC Vision', repo: 'BottleQC-Vision', cats: ['web'], updated: '2026-11', featured: true,
+      tech: ['Python', 'YOLO11', 'PyTorch', 'OpenCV', 'ByteTrack', 'FastAPI', 'SQLite', 'Chart.js', 'JavaScript', 'HTML5', 'CSS'],
+      desc: 'AI-powered quality control for bottling lines that detects, tracks and counts every bottle in real time, checks cap presence and colour, and reports defects on a live web dashboard. Built around a real product, a 90 cl glass mineral-water bottle with a pink cap, and runnable with no camera thanks to a built-in line simulator.',
+      features: ['YOLO11 detection of bottles and caps, with ByteTrack or BoT-SORT tracking switchable live from the interface', 'Exactly-once counting when a bottle crosses a virtual line, with a verdict for each: OK, missing cap or wrong colour', 'Cap presence voted over each tracked bottle and an HSV colour classifier with nine colours, mask-aware when segmentation is available', 'Four input sources: built-in simulated production line, uploaded video file, USB webcam or RTSP/HTTP stream', 'Live dashboard with annotated MJPEG stream, KPIs, yield ring, production charts, defect alerts and a filterable log with a snapshot of every bottle', 'Sessions and inspections stored in SQLite, with one-click CSV, Excel and PDF reports including a defect gallery', 'FastAPI server with REST, WebSocket and streaming, inspection on a background thread and settings changed without restarting'] },
     { id: 'arduvia', title: 'ARDUVIA', repo: 'ARDUVIA', cats: ['web', '3d'], updated: '2026-11', featured: true,
       tech: ['Angular 20', 'TypeScript', 'Three.js', 'GSAP', 'SCSS', 'Symfony 7.3', 'PHP 8.2', 'Doctrine ORM', 'SQLite', 'Claude API', 'PHPUnit'],
       desc: 'Interactive 3D learning platform for Arduino beginners: build circuits on illustrated workbenches, write code and watch it run on a virtual board, solve challenges that are verified automatically, track progress and get help from an AI tutor, in English, French, Spanish and Arabic.',
